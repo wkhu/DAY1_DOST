@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-button fill="clear" routerLink="/home">
+    <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+    Back
+  </ion-button>
+  <ion-toolbar>
+    <ion-title>{{name}} recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img alt="{{name}}" src="assets/img/{{name}}.jpg" />
+  <ion-item>
+    <ion-label>
+      <h1>Ingredients</h1>
+    </ion-label>
+  </ion-item>
+  <ion-list [inset]="true">
+    <ion-item *ngFor="let key of ingredients">
+      <ion-label>{{key}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
